@@ -44,7 +44,8 @@ for (const icon of icons) {
         <!--Show for festival with multiple days-->
         <div v-if="baseStore.userFestivalChosen.dagen.length > 1" class="d-flex justify-content-around flex-wrap" >
             <div v-for="(festivaldag, index ) in baseStore.userFestivalChosen.dagen" :key="index" class="kies cursor-pointer ">
-                <span @click="baseStore.chooseFestivalDay(festivaldag.ticketName)"><img :src="festivaldag.ico + '?v2'" alt="" class="w-75"></span>
+            
+                  <span @click="baseStore.chooseFestivalDay(festivaldag.ticketName, baseStore.userFestivalChosen.naam)"><img :src="festivaldag.ico + '?v2'" alt="" class="w-75"></span>
             </div>
         </div>
 
