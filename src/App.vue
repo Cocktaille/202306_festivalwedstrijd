@@ -2,11 +2,13 @@
 import { ref, onMounted } from "vue"
 import { useBaseStore } from "@/stores/baseStore.js"
 
-import HelloWorld from './components/HelloWorld.vue'
 import RegistrationLight from './components/RegistrationLight.vue'
 import Share from './components/Share.vue'
 import LoaderSpinner from './components/LoaderSpinner.vue'
-import OptinBox from './components/OptinBox.vue'
+import WedstrijdVragen from './components/WedstrijdVragen.vue'
+import KiesFestival from "./components/KiesFestival.vue"
+import KiesDatumIcoon from "./components/KiesDatumIcoon.vue"
+import Footer from './components/Footer.vue'
 
 const baseStore = useBaseStore()
 
@@ -16,23 +18,107 @@ const baseStore = useBaseStore()
 </script>
 
 <template>
-  <div id="messagentWrap"  :class="baseStore.brandShortName">  
-    <div class="container-fluid">
+  <div id="messagentWrap"   :class="baseStore.brandShortName">  
+    <div class="container-fluid text-center">
       
-      
-      <div class="p-3">
-        <span style="font-family: 'Courier New', Courier, monospace !important;">brand: {{ baseStore.brandShortName }}</span >
+      <div class="full-block mb-4">
+        <img src="@/assets/img/header_festivaltickets.png" alt="" class="d-none d-md-block w-100">
+        <img src="@/assets/img/header_festivaltickets.png" alt="" class="d-md-none w-100">
       </div>
+
+
+      <div v-if="baseStore.currentScreen == 0 " >
+
+        <div >
+          <p>Het Nieuwsblad stuurt je naar de festivals. Speel mee en win tickets voor Pukkelpop, Best Kept Secret, Graspop, Cactusfestival of Lokerse Feesten.</p>
+          
+          <p><strong>Waag ieder uur opnieuw je kans!</strong></p>
+        </div>
+
+        <RegistrationLight 
+          :loadUserDataFromSite="true"
+          :schiftingsVraag="false"
+        /> 
+      </div>
+
+      <div v-show="baseStore.currentScreen == 1 " >
+
+        <KiesFestival />
+
         
-      <HelloWorld brand="Nieuwsblad" msg="'t Begint bij ons" />
+      </div>
 
-      <!-- <OptinBox /> -->
+      <div v-if="baseStore.currentScreen == 2 " >
+
+        <WedstrijdVragen />
 
 
-      <!-- <RegistrationLight 
-        :loadUserDataFromSite="true"
-        :schiftingsVraag="true"
-      />  -->
+      </div>
+
+
+      <div v-if="baseStore.currentScreen == 3 " >
+
+        <KiesDatumIcoon />
+        
+
+
+      </div>
+
+      <div v-if="baseStore.currentScreen == 4 " >
+
+        <h4 class="brand-font-primary brand-text-color-primary">Proficiat!</h4> 
+        <p>Je hebt een ticket gewonnen voor {{ baseStore.userFestivalChosen.naam }}</p>
+
+        <p>Je ontvangt alle info via mail.</p>
+
+        <Share 
+          msg="Deel met je vrienden:" 
+          :facebook="true" 
+          :twitter="true" 
+          :whatsapp="true" 
+          :messenger="false"  
+        />
+      
+      </div>
+
+      <div v-if="baseStore.currentScreen == 5 " >
+
+        <h4 class="brand-font-primary brand-text-color-primary">Jammer!</h4> 
+        <p>Je hebt nu geen ticket gewonnen voor {{ baseStore.userFestivalChosen.naam }}</p>
+        <p><strong>Volgend uur krijg je een nieuwe kans!</strong></p>
+
+        <Share 
+          msg="Deel met je vrienden:" 
+          :facebook="true" 
+          :twitter="true" 
+          :whatsapp="true" 
+          :messenger="false"  
+        />
+
+      </div>
+
+
+      <div v-if="baseStore.currentScreen == 10 " >
+
+        <div class="">
+          <h4 class="brand-font-primary brand-text-color-primary">Jammer!</h4> 
+          <p>Je gaf een fout antwoord op de wedstrijdvraag.</p>
+          <p>Probeer het volgend uur opnieuw</p>
+        </div>
+
+        <Share 
+        msg="Deel met je vrienden:" 
+        :facebook="true" 
+        :twitter="true" 
+        :whatsapp="true" 
+        :messenger="false"  
+      />
+
+
+      </div>
+
+
+      <Footer  />
 
       <!-- <Share 
         msg="Deel met je vrienden:" 
@@ -86,11 +172,11 @@ const baseStore = useBaseStore()
 /**fonts**/
 
 /**colors**/
-#messagentWrap.nb .brand-text-color-primary { color:#000068 }
+#messagentWrap.nb .brand-text-color-primary { color:#29ABE2 }
 #messagentWrap.nb .brand-text-color-secondary { color:#5811F4 }
 #messagentWrap.nb .brand-text-color-tertiary { color:#000000 }
 
-#messagentWrap.nb .brand-button-color-primary { background-color:#000068; color:white; }
+#messagentWrap.nb .brand-button-color-primary { background-color:#F7D611; color:black; font-weight: bold; }
 #messagentWrap.nb .brand-button-color-secondary { background-color:#5811F4; color:white; }
 #messagentWrap.nb .brand-button-color-tertiary { background-color:#000000; color:white; }
 
@@ -220,7 +306,7 @@ input[type="checkbox"]:focus + label::before {
 /**** HELPER CLASSES ****/
 #messagentWrap .text-xs { font-size:0.5rem; line-height: 1rem;}
 #messagentWrap .text-sm { font-size:0.7rem; line-height: 1.1rem}
-#messagentWrap .text-md { font-size:1.2rem; line-height: 1.7rem}
+#messagentWrap .text-md { font-size:1.2rem; line-height: 1.5rem}
 #messagentWrap .text-lg { font-size:1.5rem; line-height: 2rem}
 #messagentWrap .text-xl { font-size:1.8rem; line-height: 2.3rem}
 #messagentWrap .text-2xl { font-size:2rem; line-height: 2.5rem}
@@ -230,12 +316,13 @@ input[type="checkbox"]:focus + label::before {
 #messagentWrap .text-bold {font-weight: bold;}
 #messagentWrap .text-muted {opacity:0.8}
 #messagentWrap .text-error {color:red}
+#messagentWrap .text-underline {text-decoration: underline;}
 
 #messagentWrap .cursor-pointer {cursor:pointer}
 
 #messagentWrap .no-underline {text-decoration: none !important;}
 
-
+#messagentWrap .rounded-none {border-radius: 0rem!important;}
 #messagentWrap .rounded {border-radius: 0.25rem!important;}
 #messagentWrap .rounded-md {border-radius: 0.5rem!important;}
 #messagentWrap .rounded-lg {border-radius: 1rem!important;}

@@ -61,9 +61,9 @@ const cptMessShare = computed(() => {
 
     
 
-    <div class="my-0 text-center" :class="androidOrIOS()">
+    <div class="my-0 mt-5 text-center" :class="androidOrIOS()">
 
-        <h3 class="text-2xl brand-font-primary mb-3">{{ msg }}</h3>
+        <h3 class="text-lg brand-font-primary mb-3">{{ msg }}</h3>
 
 
         <a v-if="facebook" :href="cptFbShare"

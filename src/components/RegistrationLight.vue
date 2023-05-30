@@ -13,7 +13,7 @@ const props = defineProps({
 
 const urlCiamCheckUser = "https://interactief2.nieuwsblad.be/WedstrijdCR/WedstrijdCR.aspx?ID=w_1wXmbiOeZPMl89jlDTxbU126qvQGXjwhQXVBSG4sBve8jMM2acagHcJFMPn5Yj0n1rzBV3eeVDlw4AQB&notags=1&mail="
 const urlZipCodeCheck = "https://interactief2.nieuwsblad.be/WedstrijdCR/WedstrijdCR.aspx?ID=ImrsUUT17SyQumFQAEtlotww8kMSfobYJzUj3f7zkC%2Bk%2BF0SH_3jpKGWcZ0PW7gPmEzyd_e4xEVKd4&notags=1&NAME="
-const urlPostToMessagent = ref("https://interactief2.nieuwsblad.be/WedstrijdCR/WedstrijdCR.aspx?ID=dStwvDwGlYcN7KyhHSrErYPFUxNajWeozZ2JSb_Gignd9DwTQ0zfb5x57MWtjTtAkdbb7ZDu5RUmw6&notags=1")
+const urlPostToMessagent = ref("https://interactief2.nieuwsblad.be/WedstrijdCR/WedstrijdCR.aspx?ID=xugx1fdEip0xdFct2Iv2pg1o4NW_34bIAC6DnRVRXZJcFL2PV4bEh6c7j06ftHwjNobVEcl%2B2ImFcY&notags=1")
 
 
 
@@ -50,6 +50,12 @@ onMounted(() => {
 
         }, 500); 
     }
+
+    if (localStorage.getItem("2023-festivalwedstrijdmail") != null) {
+        userData.value.userMail = localStorage.getItem("2023-festivalwedstrijdmail")
+    }
+
+    
     
 
 })
@@ -210,7 +216,6 @@ function handleRegForm() {
     .then(response => {
         if (response.ok) {
             
-            formSubmitted()
             return response.text().then(text => ({ status: response.status, text }));
             
         } else {
@@ -220,6 +225,13 @@ function handleRegForm() {
     .then(data => {
         const cb = data.text
         console.log(cb)
+        if(cb.trim() == 'reedsdeelgenomen') {
+            errors.value.push({error: "Je hebt dit uur reeds deelgenomen. Waag volgend uur opnieuw je kans."})
+            //baseStore.currentScreen = 4
+        }
+        else {
+            formSubmitted()
+        }
         showLoaderSpinner.value = false
         
     })
@@ -235,7 +247,10 @@ function handleRegForm() {
 
 
 function formSubmitted() {
-    alert("OK")
+
+    localStorage.setItem("2023-festivalwedstrijdmail", userData.value.userMail);
+    baseStore.userMail = userData.value.userMail;
+    baseStore.currentScreen++
 }
 
 
@@ -252,7 +267,7 @@ function formSubmitted() {
       <LoaderSpinner 
         v-if="showLoaderSpinner"
         text="Even geduld" 
-        spinnerColor="#EF83F7"
+        spinnerColor="#29ABE2"
         ringColor="#efefef"
       />
   
@@ -293,7 +308,7 @@ function formSubmitted() {
               />
           </div>
   
-          <div class="newuser mb-4" >
+          <div v-if="userData.newUser" class="newuser mb-4" >
   
               <h3 class="brand-font-primary brand-text-color-primary mb-2 text-lg text-bold ">Vul je postcode of gemeente in:</h3>
               <input 
@@ -354,12 +369,14 @@ function formSubmitted() {
           </div >
   
           <div v-if="userData.newUser" class="text-sm text-muted mb-3 ">
-              Mediahuis biedt jou als geregistreerde gebruiker een persoonlijke en kwaliteitsvolle nieuwsbeleving: we tonen relevante advertenties en zorgen ervoor dat je niet steeds hetzelfde ziet. Naast het nieuws van de dag kunnen we artikels aanbevelen op basis van je voorkeuren en interesses. Je geeft ook aan welke voordeelacties of nieuwsbrieven je graag ontvangt. Registratie is gratis, maar we hebben wel persoonsgegevens nodig om deze dienst te kunnen aanbieden. Vul bovenstaande velden in om deze gratis dienst te gebruiken en klik op de knop om verder te gaan. Lees de volledige voorwaarden op <a href="https://mediahuis.be/privacy" class="text-muted " target="_blank"><u>deze pagina</u></a>.
+
+            <p>Door te registreren ga je akkoord met de <a href="https://www.mediahuis.be/nl/gebruiksvoorwaarden/" class="text-muted " target="_blank"><u>gebruiksvoorwaarden</u></a>. <br />Ons <a href="https://www.mediahuis.be/en/privacy-policy/" class="text-muted " target="_blank"><u>privacybeleid</u></a> kan je steeds hier nalezen.</p>
+
           </div>
   
   
           <div class=" mb-5">
-              <button class="brand-button-color-primary col-12 p-3 border-0 ">Ga verder > </button>
+              <button class="brand-button-color-primary col-12 p-3 border-0 ">Waag je kans > </button>
           </div>
   
   
