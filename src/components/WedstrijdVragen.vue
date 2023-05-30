@@ -45,9 +45,9 @@ function checkAntwoord (antwoord, juistantwoord) {
         <p>Hey, Je wil meespelen voor  <strong>{{ baseStore.userFestivalChosen.naam }}</strong>.</p>
         <p><strong>Beantwoord eerst nog even deze vraag:</strong></p>
         
-        <h2 class="brand-font-primarsy brand-text-color-primary text-md text-bold">{{ vragenFestival.VRAAG }}</h2>
+        <h2 class="brand-font-primarsy brand-text-color-primary text-md text-bold mb-3">{{ vragenFestival.VRAAG }}</h2>
 
-        <div class="mt-3 mb-3" v-if="vragenFestival.IMG_URL != undefined ">
+        <div class="mb-3" v-if="vragenFestival.IMG_URL != undefined ">
             <img class="w-100" :src="vragenFestival.IMG_URL" alt="">
         </div>
 
@@ -69,7 +69,7 @@ function checkAntwoord (antwoord, juistantwoord) {
         >
             {{ vragenFestival.ANTWOORD_3 }}
         </div>
-        (Deze vraag komt uit: {{ vragenFestival.FESTIVAL }})
+        
         
     </div>
 </template>
