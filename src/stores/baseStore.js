@@ -155,7 +155,7 @@ function getBrandName() {
 
         {
             "week": 1,
-            "naam": "Afro-Latino Festival",
+            "naam": "Afro Latino Festival",
             "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_afrolatino.svg?v2",
             "dagen": [
                 {

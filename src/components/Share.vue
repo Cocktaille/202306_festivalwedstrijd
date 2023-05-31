@@ -36,20 +36,20 @@ function androidOrIOS() {
 
 
 const cptFbShare = computed(() => {
-    return "https://www.facebook.com/sharer/sharer.php?u=https://www.nieuwsblad.be/beste-frituur-van-vlaanderen?SOURCE=fb_share" + (userAgent.value != "ios" ? '&navigation=external' : ''); 
+    return "https://www.facebook.com/sharer/sharer.php?u=https://www.nieuwsblad.be/festivalwedstrijd?SOURCE=fb_share" + (userAgent.value != "ios" ? '&navigation=external' : ''); 
 })
 
 
 const cptWaShare = computed(() => {
-    return "https://wa.me/" + (userAgent.value != "ios" ? '?navigation=external' : '?')  + "&text=" + personalMessage.value + " is voor mij de Beste Frituur van Vlaanderen. Breng ook je stem uit via de Nieuwsblad-app en win een jaar lang gratis frieten. Meer info: www.nieuwsblad.be/frituur" 
+    return "https://wa.me/" + (userAgent.value != "ios" ? '?navigation=external' : '?')  + "&text=" + "Win duotickets voor de festivals. Waag ieder uur je kans en ontdek meteen of je wint: www.nieuwsblad.be/festivalwedstrijd" 
 })
 
 const cptTwShare = computed(() => {
-    return "https://twitter.com/intent/tweet?url=https://www.nieuwsblad.be/beste-frituur-van-vlaanderen&SOURCE=tw_share&text=" + personalMessage.value + " is voor mij de Beste Frituur van Vlaanderen. Breng ook je stem uit via de Nieuwsblad-app en win een jaar lang gratis frieten." + (userAgent.value != "ios" ? '&navigation=external' : ''); 
+    return "https://twitter.com/intent/tweet?url=https://www.nieuwsblad.be/festivalwedstrijd&SOURCE=tw_share&text=" + "Win duotickets voor de festivals. Waag ieder uur je kans en ontdek meteen of je wint!" + (userAgent.value != "ios" ? '&navigation=external' : ''); 
 })
 
 const cptMessShare = computed(() => {
-    return "fb-messenger://share/?link=https://www.nieuwsblad.be/beste-frituur-van-vlaanderen?SOURCE=mess_share" + (userAgent.value != "ios" ? '&navigation=external' : ''); 
+    return "fb-messenger://share/?link=https://www.nieuwsblad.be/festivalwedstrijd?SOURCE=mess_share" + (userAgent.value != "ios" ? '&navigation=external' : ''); 
 })
 
 
@@ -61,7 +61,7 @@ const cptMessShare = computed(() => {
 
     
 
-    <div class="my-0 mt-5 text-center" :class="androidOrIOS()">
+    <div class="my-0 mt-5m text-center" :class="androidOrIOS()">
 
         <h3 class="text-lg brand-font-primary mb-3">{{ msg }}</h3>
 

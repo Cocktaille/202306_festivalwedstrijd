@@ -31,6 +31,8 @@ for (const icon of icons) {
 
 <template>
     <div class="text-center">
+
+        <p><strong>Je antwoord is correct.</strong></p>
         <p v-if="baseStore.userFestivalChosen.dagen.length > 1" class=" mb-4">Kies je favoriete dag en ontdek meteen of jij een duoticket voor <strong>{{ baseStore.userFestivalChosen.naam }}</strong> wint:</p>
         <p v-else class=" mb-4">Kies een icoon en ontdek meteen of jij een duoticket voor <strong>{{ baseStore.userFestivalChosen.naam }}</strong> wint:</p>
 

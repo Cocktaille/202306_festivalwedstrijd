@@ -30,7 +30,7 @@ const baseStore = useBaseStore()
       <div v-if="baseStore.currentScreen == 0 " >
 
         <div v-if="baseStore.week == 1 ">
-          <p>Het Nieuwsblad stuurt je naar de beste festivals! Speel mee en win deze week duotickets voor Cactusfestival, Lokerse Feesten, Afro-Latino Festival, Live /s Live of Paradise City.</p>
+          <p>Het Nieuwsblad stuurt je naar de beste festivals! Speel mee en win deze week duotickets voor Cactusfestival, Lokerse Feesten, Afro Latino Festival, Live /s Live of Paradise City.</p>
           
           <p><strong>Waag ieder uur opnieuw je kans!</strong></p>
         </div>
@@ -75,7 +75,7 @@ const baseStore = useBaseStore()
         <h4 class="brand-font-primary brand-text-color-primary">Proficiat!</h4> 
         <p><strong>Je wint een duoticket voor {{ baseStore.userFestivalChosen.naam }}</strong></p>
 
-        <p>Je ontvangt zo dadelijk een e-mail met verdere informatie.</p>
+        <p>Je ontvangt zo dadelijk alle informatie per e-mail. De tickets worden ten laatste enkele dagen voor het festival verstuurd.</p>
 
         <p>Volgende week maak je de hele week kans op tickets voor Rammstein, Pukkelpop, Nostalgie Beach Festival en Dranouter.</p>
 
