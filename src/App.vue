@@ -22,8 +22,8 @@ const baseStore = useBaseStore()
     <div class="container-fluid text-center">
       
       <div class="full-block mb-4">
-        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/header_festivaltickets_green.png?v2" alt="" class="d-none d-md-block w-100">
-        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/header_festivaltickets_green.png?v2" alt="" class="d-md-none w-100">
+        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/header_festivaltickets.png?v2" alt="" class="d-none d-md-block w-100">
+        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/header_festivaltickets.png?v2" alt="" class="d-md-none w-100">
       </div>
 
 
