@@ -307,7 +307,7 @@ function getBrandName() {
     function chooseFestivalDay(ticketName, festivalName) {
         // alert(ticketName)
 
-        fetch("https://interactief2.nieuwsblad.be/WedstrijdCR/WedstrijdCR.aspx?ID=vHKtqpyiYtNtbeyk3SIM80zhdy8uZSDO0HUqUbW2%2B7cBNBuEP5Auo6avQtvgcZ80jSRa8zyLstZ4iI&notags=1&mail=" + userMail.value + "&ticket_keuze=" + ticketName + "&festival_keuze=" + festivalName)
+        fetch("https://interactief2.nieuwsblad.be/WedstrijdCR/WedstrijdCR.aspx?ID=vHKFwPaQ97YtmJ5d0ImbbaPz%2BNYt3waMo%2Bd4V6ne1Z20prulNUNaOiNlEunTbnME2LnKmN5jZrZXS8&notags=1&mail=" + userMail.value + "&ticket_keuze=" + ticketName + "&festival_keuze=" + festivalName)
         .then(response => {
             if (response.ok) {
                 
