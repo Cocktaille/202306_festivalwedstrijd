@@ -131,11 +131,11 @@ const baseStore = useBaseStore()
 
 
       <div v-if="baseStore.currentScreen == 0 && baseStore.week == 1">
-        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos_footer_week_1.png" alt="" class="w-100">
+        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos_footer_week_1.png?v2" alt="" class="w-100">
       </div>
 
       <div v-if="baseStore.currentScreen == 0 && baseStore.week == 2">
-        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos_footer_week_2.png" alt="" class="w-100">
+        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos_footer_week_2.png?v2" alt="" class="w-100">
       </div>
 
       <!-- <Share 
