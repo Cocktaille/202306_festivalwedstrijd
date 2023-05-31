@@ -22,8 +22,8 @@ const baseStore = useBaseStore()
     <div class="container-fluid text-center">
       
       <div class="full-block mb-4">
-        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/header_festivaltickets.png" alt="" class="d-none d-md-block w-100">
-        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/header_festivaltickets.png" alt="" class="d-md-none w-100">
+        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/header_festivaltickets.png?v2" alt="" class="d-none d-md-block w-100">
+        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/header_festivaltickets.png?v2" alt="" class="d-md-none w-100">
       </div>
 
 
@@ -131,11 +131,11 @@ const baseStore = useBaseStore()
 
 
       <div v-if="baseStore.currentScreen == 0 && baseStore.week == 1">
-        <img src="@/assets/img/logos_footer_week_1.png" alt="" class="w-100">
+        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos_footer_week_1.png" alt="" class="w-100">
       </div>
 
       <div v-if="baseStore.currentScreen == 0 && baseStore.week == 2">
-        <img src="@/assets/img/logos_footer_week_2.png" alt="" class="w-100">
+        <img src="https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos_footer_week_2.png" alt="" class="w-100">
       </div>
 
       <!-- <Share 

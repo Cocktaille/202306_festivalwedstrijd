@@ -106,11 +106,11 @@ function getBrandName() {
         {
             "week": 1,
             "naam": "Paradise City",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_paradisecity.svg",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_paradisecity.svg?v2",
             "dagen": [
                 {
                     "dag": "",
-                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_30.svg",
+                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_30.svg?v2",
                     "ticketName": "paradise_combi",
                     "type": "combiticket"
                 }
@@ -120,17 +120,17 @@ function getBrandName() {
         {
             "week": 1,
             "naam": "Live /s Live",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_liveislive.svg",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_liveislive.svg?v2",
             "dagen": [
                 {
                     "dag": "Zaterdag 24/6",
-                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/juni/ico_cal_aug_24.svg",
+                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/juni/ico_cal_aug_24.svg?v2",
                     "ticketName": "liveislive_24",
                     "type": "dagticket"
                 },
                 {
                     "dag": "Zondag 25/6",
-                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/juni/ico_cal_aug_25.svg",
+                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/juni/ico_cal_aug_25.svg?v2",
                     "ticketName": "liveislive_25",
                     "type": "dagticket"
                 }
@@ -140,12 +140,12 @@ function getBrandName() {
         {
             "week": 1,
             "naam": "Cactusfestival",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_cactusfestival.svg",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_cactusfestival.svg?v2",
             "dagen": [
 
                 {
                     "dag": "Zaterdag 8/8",
-                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/juli/ico_cal_aug_08.svg",
+                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/juli/ico_cal_aug_08.svg?v2",
                     "ticketName": "cactus_8",
                     "type": "dagticket"
                 }
@@ -156,7 +156,7 @@ function getBrandName() {
         {
             "week": 1,
             "naam": "Afro-Latino Festival",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_afrolatino.svg",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_afrolatino.svg?v2",
             "dagen": [
                 {
                     "dag": "",
@@ -170,35 +170,35 @@ function getBrandName() {
         {
             "week": 1,
             "naam": "Lokerse Feesten",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_lokersefeesten.svg",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_lokersefeesten.svg?v2",
             "dagen": [
                 {
                     "dag": "Zaterdag 5/8",
-                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_05.svg",
+                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_05.svg?v2",
                     "ticketName": "lokerse_5",
                     "type": "dagticket"
                 },
                 {
                     "dag": "Zondag 6/8",
-                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_06.svg",
+                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_06.svg?v2",
                     "ticketName": "lokerse_6",
                     "type": "dagticket"
                 },
                 {
                     "dag": "Zondag 9/8",
-                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_09.svg",
+                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_09.svg?v2",
                     "ticketName": "lokerse_9",
                     "type": "dagticket"
                 },
                 {
                     "dag": "Zaterdag 11/8",
-                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_11.svg",
+                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_11.svg?v2",
                     "ticketName": "lokerse_11",
                     "type": "dagticket"
                 },
                 {
                     "dag": "Zondag 12/8",
-                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_12.svg",
+                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_12.svg?v2",
                     "ticketName": "lokerse_12",
                     "type": "dagticket"
                 }
@@ -208,7 +208,7 @@ function getBrandName() {
         {
             "week": 2,
             "naam": "Rammstein",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_rammstein.svg",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_rammstein.svg?v2",
             "dagen": [
                 {
                     "dag": "Vrijdag 4/8",
@@ -222,7 +222,7 @@ function getBrandName() {
         {
             "week": 2,
             "naam": "Nostalgie Beach Festival",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_nostalgiebeach.svg",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_nostalgiebeach.svg?v2",
             "dagen": [
                 {
                     "dag": "",
@@ -236,11 +236,11 @@ function getBrandName() {
         {
             "week": 2,
             "naam": "Dranouter",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_dranouter.svg",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_dranouter.svg?v2",
             "dagen": [
                 {
                     "dag": "Vrijdag 4/8",
-                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/juli/ico_cal_aug_04.svg",
+                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/juli/ico_cal_aug_04.svg?v2",
                     "ticketName": "dranouter_4",
                     "type": "dagticket"
                 }
@@ -253,7 +253,7 @@ function getBrandName() {
         {
             "week": 2,
             "naam": "Pukkelpop",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_pukkelpop.svg",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_pukkelpop.svg?v2",
             "dagen": [
                 {
                     "dag": "",
