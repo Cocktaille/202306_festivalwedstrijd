@@ -40,23 +40,23 @@ onMounted(() => {
     if(props.loadUserDataFromSite) {
         const checkUserDataFromSite = setInterval(function() {
 
-            if (typeof MEDIAHUIS !== "undefined" ) {
+            if (typeof MEDIAHUIS !== "undefined" && localStorage.getItem("2023-festivalwedstrijdmail") == null ) {
                 clearInterval(checkUserDataFromSite); // Stop checking for the variable
                 userDataFromSite.value = MEDIAHUIS.user
 
                 //prefill email field with the data
                 userData.value.userMail = userDataFromSite.value.email
             }
-           
+            else if (localStorage.getItem("2023-festivalwedstrijdmail") != null) {
+                userData.value.userMail = localStorage.getItem("2023-festivalwedstrijdmail")
+            }
             
 
         }, 500); 
     }
 
 
-    if (localStorage.getItem("2023-festivalwedstrijdmail") != null) {
-        userData.value.userMail = localStorage.getItem("2023-festivalwedstrijdmail")
-    }
+    
     
 
     
