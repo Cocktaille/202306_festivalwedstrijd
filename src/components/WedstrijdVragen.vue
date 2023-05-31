@@ -42,8 +42,8 @@ function checkAntwoord (antwoord, juistantwoord) {
 
 <template>
     <div>
-        <p>Hey, Je wil meespelen voor  <strong>{{ baseStore.userFestivalChosen.naam }}</strong>.</p>
-        <p><strong>Beantwoord eerst nog even deze vraag:</strong></p>
+        <p>Je speelt mee voor een duoticket voor  <strong>{{ baseStore.userFestivalChosen.naam }}</strong>.</p>
+        <p><strong>Beantwoord onze wedstrijdvraag om verder te gaan.</strong></p>
         
         <h2 class="brand-font-primarsy brand-text-color-primary text-md text-bold mb-3">{{ vragenFestival.VRAAG }}</h2>
 

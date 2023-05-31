@@ -29,8 +29,14 @@ const baseStore = useBaseStore()
 
       <div v-if="baseStore.currentScreen == 0 " >
 
-        <div >
-          <p>Het Nieuwsblad stuurt je naar de festivals. Speel mee en win tickets voor Pukkelpop, Best Kept Secret, Graspop, Cactusfestival of Lokerse Feesten.</p>
+        <div v-if="baseStore.week == 1 ">
+          <p>Het Nieuwsblad stuurt je naar de beste festivals! Speel mee en win deze week duotickets voor Cactusfestival, Lokerse Feesten, Afro-Latino Festival, Live /s Live of Paradise City.</p>
+          
+          <p><strong>Waag ieder uur opnieuw je kans!</strong></p>
+        </div>
+
+        <div v-if="baseStore.week == 2 ">
+          <p>Het Nieuwsblad stuurt je naar de beste festivals! Speel mee en win deze week duotickets voor Rammstein, Pukkelpop, Nostalgie Beach Festival en Dranouter.</p>
           
           <p><strong>Waag ieder uur opnieuw je kans!</strong></p>
         </div>
@@ -67,9 +73,11 @@ const baseStore = useBaseStore()
       <div v-if="baseStore.currentScreen == 4 " >
 
         <h4 class="brand-font-primary brand-text-color-primary">Proficiat!</h4> 
-        <p>Je hebt een ticket gewonnen voor {{ baseStore.userFestivalChosen.naam }}</p>
+        <p><strong>Je wint een duoticket voor {{ baseStore.userFestivalChosen.naam }}</strong></p>
 
-        <p>Je ontvangt alle info via mail.</p>
+        <p>Je ontvangt zo dadelijk een e-mail met verdere informatie.</p>
+
+        <p>Volgende week maak je de hele week kans op tickets voor Rammstein, Pukkelpop, Nostalgie Beach Festival en Dranouter.</p>
 
         <Share 
           msg="Deel met je vrienden:" 
@@ -83,9 +91,10 @@ const baseStore = useBaseStore()
 
       <div v-if="baseStore.currentScreen == 5 " >
 
-        <h4 class="brand-font-primary brand-text-color-primary">Jammer!</h4> 
-        <p>Je hebt nu geen ticket gewonnen voor {{ baseStore.userFestivalChosen.naam }}</p>
-        <p><strong>Volgend uur krijg je een nieuwe kans!</strong></p>
+
+        <p><strong>Helaas, je hebt niet gewonnen.</strong></p>
+        <p><span>Kom volgend uur zeker terug en waag opnieuw je kans.</span></p>
+        <p>Ook volgende week maak je de hele week kans op tickets voor Rammstein, Pukkelpop, Nostalgie Beach Festival en Dranouter.</p>
 
         <Share 
           msg="Deel met je vrienden:" 
@@ -119,6 +128,15 @@ const baseStore = useBaseStore()
 
 
       <Footer  />
+
+
+      <div v-if="baseStore.currentScreen == 0 && baseStore.week == 1">
+        <img src="@/assets/img/logos_footer_week_1.png" alt="" class="w-100">
+      </div>
+
+      <div v-if="baseStore.currentScreen == 0 && baseStore.week == 2">
+        <img src="@/assets/img/logos_footer_week_2.png" alt="" class="w-100">
+      </div>
 
       <!-- <Share 
         msg="Deel met je vrienden:" 

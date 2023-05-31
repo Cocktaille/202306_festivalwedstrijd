@@ -31,12 +31,10 @@ for (const icon of icons) {
 
 <template>
     <div class="text-center">
-        <h3 v-if="baseStore.userFestivalChosen.dagen.length > 1" class="brand-font-primary brand-text-color-primary mb-5">Kies een dag</h3>
-        <h3 v-else class="brand-font-primary brand-text-color-primary mb-5">Kies een icoon</h3>
+        <p v-if="baseStore.userFestivalChosen.dagen.length > 1" class=" mb-4">Kies je favoriete dag en ontdek meteen of jij een duoticket voor <strong>{{ baseStore.userFestivalChosen.naam }}</strong> wint:</p>
+        <p v-else class=" mb-4">Kies een icoon en ontdek meteen of jij een duoticket voor <strong>{{ baseStore.userFestivalChosen.naam }}</strong> wint:</p>
 
-        <div class="">
-
-        </div>
+        
 
 
         
@@ -58,6 +56,26 @@ for (const icon of icons) {
                 </span>
             </div>
         </div>
+
+
+        <div class="mt-3" style="padding:20px; background:#edf9ff; margin:-15px" v-if="baseStore.userFestivalChosen.naam == 'Live /s Live' ">
+          
+            <strong>Zaterdag 24/06:</strong><br /> The War on Drugs, Balthazar, Warpoint, Sylvie Kreusch, Novastar, … 
+            <br /><br />
+            <strong>Zondag 25/06:</strong><br /> dEUS, Grace Jones, Admiral Freebee, Suede, …
+          
+        </div>
+
+        <div class="mt-3" style="padding:20px; background:#edf9ff;margin:-15px " v-if="baseStore.userFestivalChosen.naam == 'Lokerse Feesten' ">
+          
+          <strong>Zaterdag 05/08:</strong><br /> Kungs, Rag’n’Bone Man, XINK, GLINTS, De jeugd van tegenwoordig, …<br /><br />
+          <strong>Zondag 06/08:</strong><br /> Stake, Bullet for my Valentine, Megadeth, Within Temptation, Amenra, …<br /><br />
+          <strong>Woensdag 09/08:</strong><br /> Bizkit Park, Pennywise, Cyprus Hill, Stiktof, …<br /><br />
+          <strong>Vrijdag 11/08:</strong><br /> Pommelien Thijs, Bart Peeters & De Ideale Mannen, Metejoor, Regi Live, …<br /><br />
+          <strong>Zaterdag 12/08:</strong><br /> Camille, Anouk, Arsenal, Skunk Anansie, K’s Choise, …<br /><br />
+
+        
+      </div>
 
 
     </div>

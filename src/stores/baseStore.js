@@ -93,6 +93,9 @@ function getBrandName() {
 
 
     const currentScreen = ref(0)
+    
+
+
 
 
     //define festivals
@@ -136,7 +139,7 @@ function getBrandName() {
 
         {
             "week": 1,
-            "naam": "Cactus",
+            "naam": "Cactusfestival",
             "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_cactusfestival.svg",
             "dagen": [
 
@@ -152,7 +155,7 @@ function getBrandName() {
 
         {
             "week": 1,
-            "naam": "Afro Latino",
+            "naam": "Afro-Latino Festival",
             "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_afrolatino.svg",
             "dagen": [
                 {
@@ -160,48 +163,6 @@ function getBrandName() {
                     "ico": "",
                     "ticketName": "afrolatino__combi",
                     "type": "combiticket"
-                }
-            ]
-        },
-
-        {
-            "week": 1,
-            "naam": "Rammstein",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_rammstein.svg",
-            "dagen": [
-                {
-                    "dag": "Vrijdag 4/8",
-                    "ico": "",
-                    "ticketName": "rammstein_4/8",
-                    "type": "dagticket"
-                }
-            ]
-        },
-
-        {
-            "week": 1,
-            "naam": "Nostalgie Beach",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_nostalgiebeach.svg",
-            "dagen": [
-                {
-                    "dag": "",
-                    "ico": "",
-                    "ticketName": "nostalgie_combi",
-                    "type": "combiticket"
-                }
-            ]
-        },
-
-        {
-            "week": 1,
-            "naam": "Dranouter",
-            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_dranouter.svg",
-            "dagen": [
-                {
-                    "dag": "Vrijdag 4/8",
-                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/juli/ico_cal_aug_04.svg",
-                    "ticketName": "dranouter_4",
-                    "type": "dagticket"
                 }
             ]
         },
@@ -244,29 +205,64 @@ function getBrandName() {
             ]
         },
 
+        {
+            "week": 2,
+            "naam": "Rammstein",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_rammstein.svg",
+            "dagen": [
+                {
+                    "dag": "Vrijdag 4/8",
+                    "ico": "",
+                    "ticketName": "rammstein_4/8",
+                    "type": "dagticket"
+                }
+            ]
+        },
 
-        // {
-        //     "week": 1,
-        //     "naam": "Pukkelpop",
-        //     "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_pukkelpop.svg",
-        //     "dagen": [
-        //         {
-        //             "dag": "Vrijdag 18/8",
-        //             "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_18.svg",
-        //             "ticketName": "pkp_18"
-        //         },
-        //         {
-        //             "dag": "Zaterdag 19/8",
-        //             "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_19.svg",
-        //             "ticketName": "pkp_19"
-        //         },
-        //         {
-        //             "dag": "Zondag 20/8",
-        //             "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/aug/ico_cal_aug_20.svg",
-        //             "ticketName": "pkp_20"
-        //         }
-        //     ]
-        // },
+        {
+            "week": 2,
+            "naam": "Nostalgie Beach Festival",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_nostalgiebeach.svg",
+            "dagen": [
+                {
+                    "dag": "",
+                    "ico": "",
+                    "ticketName": "nostalgie_combi",
+                    "type": "combiticket"
+                }
+            ]
+        },
+
+        {
+            "week": 2,
+            "naam": "Dranouter",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_dranouter.svg",
+            "dagen": [
+                {
+                    "dag": "Vrijdag 4/8",
+                    "ico": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/juli/ico_cal_aug_04.svg",
+                    "ticketName": "dranouter_4",
+                    "type": "dagticket"
+                }
+            ]
+        },
+
+        
+
+
+        {
+            "week": 2,
+            "naam": "Pukkelpop",
+            "logo": "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/logos/logo_pukkelpop.svg",
+            "dagen": [
+                {
+                    "dag": "",
+                    "ico": "",
+                    "ticketName": "pukkelpop_combi",
+                    "type": "combiticket"
+                }
+            ]
+        },
         
         
         
@@ -276,6 +272,10 @@ function getBrandName() {
         
     ])
 
+    const festivalsPerWeek = computed(() => {
+        return festivals.value.filter(item => item.week === week.value);
+      });
+
 
     const iconsForOneDay = [
         "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/main/ico_1.svg", 
@@ -283,6 +283,7 @@ function getBrandName() {
         "https://www.nieuwsblad.be/extra/static/2023/202307_festivaltickets/img/icons/main/ico_3.svg"
     ]
 
+    const week = ref(0)
 
     //load vragen
     onMounted(() => {
@@ -291,6 +292,21 @@ function getBrandName() {
             .then(data => {
                 vragenAll.value = data
             });
+
+        // Create a target date
+        const targetDate = new Date('2023-06-12'); //moet op de dag staan wanneer de tweede week start
+
+        // Get the current date
+        const currentDate = new Date();
+
+        // Compare the current date with the target date
+        if (currentDate > targetDate) {
+            week.value = 2
+        } else {
+            week.value = 1
+        }
+
+        
     })
 
     const vragenAll = ref([])
@@ -351,7 +367,9 @@ function getBrandName() {
 
         currentScreen, 
         festivals, 
+        festivalsPerWeek,
         vragenAll, 
+        week,
 
         chooseFestival, 
         userFestivalChosen, 
