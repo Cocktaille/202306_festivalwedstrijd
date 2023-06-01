@@ -303,7 +303,7 @@ function getBrandName() {
         if (currentDate > targetDate) {
             week.value = 2
         } else {
-            week.value = 2
+            week.value = 1
         }
 
         
