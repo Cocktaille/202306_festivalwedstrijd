@@ -294,7 +294,7 @@ function getBrandName() {
             });
 
         // Create a target date
-        const targetDate = new Date('2023-06-12'); //moet op de dag staan wanneer de tweede week start
+        const targetDate = new Date('2023-06-11'); //moet op de dag staan wanneer de tweede week start
 
         // Get the current date
         const currentDate = new Date();
